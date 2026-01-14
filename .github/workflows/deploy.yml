@@ -16,11 +16,12 @@ jobs:
           node-version: "24"
       # Pick your own package manager and build script
       - run: pnpm install
-      - run: pnpm nuxi build --preset github_pages
+      - run: pnpm nuxt build --preset github_pages
         env:
+          NUXT_APP_BASE_URL: ${{ github.event.repository.name }}
           NUXT_PUBLIC_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./.output/public
   # Deployment job
