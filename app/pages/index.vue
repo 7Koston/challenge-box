@@ -11,13 +11,13 @@ const challengesOrigin = ref<string[]>([]);
 const currentChallenge = ref<string>();
 
 const isDragging = ref(false);
-const fileInput = ref<HTMLInputElement>();
+const fileInput = useTemplateRef('fileInput');
 
-function openFileDialog() {
+function openFileDialog(): void {
   fileInput.value?.click();
 }
 
-function onFileSelect(event: Event) {
+function onFileSelect(event: Event): void {
   const target = event.target as HTMLInputElement;
   const file = target.files?.[0];
   if (file) {
@@ -25,7 +25,7 @@ function onFileSelect(event: Event) {
   }
 }
 
-function onDrop(event: DragEvent) {
+function onDrop(event: DragEvent): void {
   event.preventDefault();
   isDragging.value = false;
 
@@ -35,16 +35,16 @@ function onDrop(event: DragEvent) {
   }
 }
 
-function onDragOver(event: DragEvent) {
+function onDragOver(event: DragEvent): void {
   event.preventDefault();
   isDragging.value = true;
 }
 
-function onDragLeave() {
+function onDragLeave(): void {
   isDragging.value = false;
 }
 
-function showRandomChallenge() {
+function showRandomChallenge(): void {
   if (challengesLeft.value.length > 0) {
     const randomIndex = Math.floor(Math.random() * challengesLeft.value.length);
     currentChallenge.value = challengesLeft.value[randomIndex];
@@ -53,7 +53,7 @@ function showRandomChallenge() {
   }
 }
 
-async function handleFileUpload(file: File) {
+async function handleFileUpload(file: File): Promise<void> {
   if (file.type !== 'text/plain') {
     return;
   }
@@ -96,16 +96,19 @@ async function handleFileUpload(file: File) {
       @dragover="onDragOver"
       @dragleave="onDragLeave">
       <div class="upload-content">
-        <Icon name="ph:upload" class="upload-icon" />
+        <Icon name="upload" class="upload-icon" />
+
         <p class="upload-text">{{ $t('upload.clickOrDrag') }}</p>
+
         <p class="upload-subtext">{{ $t('upload.description') }}</p>
       </div>
+
       <input
         ref="fileInput"
         type="file"
         accept=".txt"
-        @change="onFileSelect"
-        style="display: none" />
+        style="display: none"
+        @change="onFileSelect" />
     </div>
 
     <!-- Clickable area when challenges loaded -->
@@ -125,6 +128,7 @@ async function handleFileUpload(file: File) {
         class="challenge"
         @click="currentChallenge = undefined">
         <p class="challenge_text">{{ currentChallenge }}</p>
+
         <p class="challenge_hint">{{ $t('challenge.clickToContinue') }}</p>
       </div>
     </Transition>

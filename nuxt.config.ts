@@ -72,6 +72,15 @@ export default defineNuxtConfig({
       },
     ],
   },
+  icon: {
+    provider: 'none',
+    customCollections: [
+      {
+        prefix: '',
+        dir: './app/assets/icons',
+      },
+    ],
+  },
   // Generated with: https://material-foundation.github.io
   css: [
     '~/assets/css/theme/dark.css',

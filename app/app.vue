@@ -6,7 +6,9 @@ useHeadSafe({ htmlAttrs: i18nHead.value.htmlAttrs });
 <template>
   <div>
     <NuxtRouteAnnouncer />
+
     <ThemeToggle />
+
     <NuxtPage />
   </div>
 </template>

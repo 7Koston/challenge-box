@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const colorMode = useColorMode();
 
-function toggleTheme() {
+function toggleTheme(): void {
   colorMode.preference = colorMode.value === 'light' ? 'dark' : 'light';
 }
 </script>
@@ -9,10 +9,8 @@ function toggleTheme() {
 <template>
   <button class="theme-toggle" @click="toggleTheme">
     <Icon
-      v-if="colorMode.value === 'light'"
-      name="ph:sun"
+      :name="colorMode.value === 'light' ? 'sun' : 'moon-stars'"
       class="theme-toggle_icon" />
-    <Icon v-else name="ph:moon" class="theme-toggle_icon" />
   </button>
 </template>
 

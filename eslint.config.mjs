@@ -95,7 +95,7 @@ export default withNuxt(
       '@typescript-eslint/no-inferrable-types': 'off',
       // Vue.js / Nuxt.js
       'nuxt/prefer-import-meta': 'error',
-       'vue/define-emits-declaration': ['error', 'type-literal'],
+      'vue/define-emits-declaration': ['error', 'type-literal'],
       'vue/define-props-declaration': ['error', 'type-based'],
       'vue/define-props-destructuring': [
         'error',
