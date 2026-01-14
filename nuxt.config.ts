@@ -6,8 +6,8 @@ const assetsMaxAge = 31536000;
 const noSsrNoIndexNoStorePR: NitroRouteConfig = {
   ssr: false,
   swr: false,
-  prerender: false,
-  static: true,
+  prerender: true,
+  static: false,
   cache: undefined,
   headers: {
     'Cache-Control': 'no-store,max-age=1',
@@ -18,6 +18,7 @@ const assetsR: NitroRouteConfig = {
   ssr: false,
   swr: false,
   prerender: false,
+  static: true,
   cache: { maxAge: assetsMaxAge },
   headers: { 'Cache-Control': `public,max-age=${assetsMaxAge}` },
 };
