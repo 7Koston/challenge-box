@@ -1,0 +1,61 @@
+{
+  "name": "challenge-box",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Challenge Box Game",
+  "author": "7Koston",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "scripts": {
+    "clean": "nuxi cleanup",
+    "clean:full": "node ./scripts/clean.mjs .output .nuxt node_modules pnpm-lock.yaml",
+    "reinstall": "node ./scripts/clean.mjs .output .nuxt node_modules && pnpm install --frozen-lockfile",
+    "upgrade": "pnpm clean:deps && pnpm install",
+    "prepare": "nuxi prepare",
+    "postprepare": "husky || true",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "postinstall": "nuxi prepare",
+    "local": "nuxi dev --dotenv .env",
+    "build": "nuxi build"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "pnpm lint:fix",
+      "pnpm format"
+    ]
+  },
+  "engines": {
+    "node": ">=24.12.0"
+  },
+  "packageManager": "pnpm@10.28.0",
+  "dependencies": {
+    "@iconify-json/ph": "^1.2.2",
+    "@nuxt/eslint": "1.12.1",
+    "@nuxt/fonts": "0.12.1",
+    "@nuxt/icon": "2.2.0",
+    "@nuxt/image": "2.0.0",
+    "@nuxtjs/color-mode": "4.0.0",
+    "@nuxtjs/i18n": "10.2.1",
+    "@vueuse/core": "^14.1.0",
+    "@vueuse/nuxt": "^14.1.0",
+    "es-toolkit": "^1.43.0",
+    "nuxt": "^4.2.2",
+    "vue": "^3.5.26",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.12.1",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/node": "^25.0.8",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.2.2"
+  }
+}

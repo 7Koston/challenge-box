@@ -1,0 +1,13 @@
+{
+  "page": {
+    "title": "Challenge Box Game"
+  },
+  "upload": {
+    "clickOrDrag": "Click or drag & drop a .txt file",
+    "description": "Each line will become a challenge"
+  },
+  "challenge": {
+    "hint": "Click anywhere to see a challenge",
+    "clickToContinue": "Click to continue"
+  }
+}
