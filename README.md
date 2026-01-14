@@ -1,6 +1,6 @@
 # Challenge Box Game 🎲
 
-An interactive web application that randomly displays challenges from a user-uploaded text file. Perfect for team building activities, random decision making, or game nights!
+An interactive web application that randomly displays challenges from a user-uploaded text file. Perfect for team building activities, random decision making, or game nights! [Available here](https://7koston.github.io/challenge-box)
 
 ## ✨ Features
 
