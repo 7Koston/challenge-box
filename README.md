@@ -1,75 +1,130 @@
-# Nuxt Minimal Starter
+# Challenge Box Game 🎲
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+An interactive web application that randomly displays challenges from a user-uploaded text file. Perfect for team building activities, random decision making, or game nights!
 
-## Setup
+## ✨ Features
 
-Make sure to install dependencies:
+- **📁 File Upload**: Upload a `.txt` file with challenges (one per line) via click or drag & drop
+- **🎯 Random Selection**: Click to reveal random challenges from your uploaded list
+- **🌍 Internationalization**: Multi-language support (English, Russian)
+- **🎨 Theme Support**: Light/dark mode with high contrast variants
+- **📱 Responsive Design**: Works seamlessly across all devices
+- **⚡ Fast & Modern**: Built with Nuxt 4.x and Vue 3
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Nuxt 4.x](https://nuxt.com/)
+- **UI Library**: Vue 3 with TypeScript
+- **Styling**: Custom CSS with Material Design themes
+- **Icons**: [@nuxt/icon](https://nuxt.com/modules/icon) with Iconify
+- **Internationalization**: [@nuxtjs/i18n](https://i18n.nuxtjs.org/)
+- **Color Mode**: [@nuxtjs/color-mode](https://color-mode.nuxtjs.org/)
+- **Package Manager**: pnpm
+- **Code Quality**: ESLint + Prettier + Husky
+- **Deployment**: GitHub Pages (static generation)
+
+## 📋 Prerequisites
+
+- Node.js >= 24.12.0
+- pnpm >= 10.28.0
+
+## 🚀 Setup
+
+Install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+## 💻 Development
 
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+pnpm local
 ```
-
-## Production
 
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+## 🧹 Maintenance Scripts
 
 ```bash
-# npm
-npm run preview
+# Clean Nuxt cache
+pnpm clean
 
-# pnpm
-pnpm preview
+# Full clean (includes node_modules and lock file)
+pnpm clean:full
 
-# yarn
-yarn preview
+# Reinstall dependencies from scratch
+pnpm reinstall
 
-# bun
-bun run preview
+# Upgrade dependencies
+pnpm upgrade
+
+# Lint code
+pnpm lint
+
+# Lint and fix
+pnpm lint:fix
+
+# Format code
+pnpm format
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 📂 Project Structure
+
+```
+challenge-box/
+├── app/
+│   ├── assets/          # CSS themes and icons
+│   ├── components/      # Vue components (ThemeToggle)
+│   ├── pages/           # Application pages
+│   └── app.vue          # Root component
+├── i18n/
+│   └── locales/         # Translation files (en, ru)
+├── public/              # Static assets
+└── nuxt.config.ts       # Nuxt configuration
+```
+
+## 🌐 Internationalization
+
+The app supports multiple languages:
+
+- English (default)
+- Russian
+
+Add more languages by creating new JSON files in `i18n/locales/` and updating `nuxt.config.ts`.
+
+## 🎨 Theming
+
+The application includes:
+
+- Light mode
+- Dark mode
+- High contrast variants
+
+Themes are automatically applied based on user preference and can be toggled via the ThemeToggle component.
+
+## 📝 Usage
+
+1. Open the application
+2. Upload a `.txt` file with challenges (one challenge per line)
+3. Click anywhere on the screen to reveal a random challenge
+4. Continue clicking to see more challenges
+5. Upload a new file anytime to start fresh
+
+## 📄 License
+
+GPL-3.0-only
+
+## 👤 Author
+
+7Koston
+
+---
+
+Built with [Nuxt](https://nuxt.com/) and ❤️
