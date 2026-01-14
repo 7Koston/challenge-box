@@ -4,7 +4,7 @@ import pkg from './package.json';
 const assetsMaxAge = 31536000;
 //
 const noSsrNoIndexNoStorePR: NitroRouteConfig = {
-  ssr: false,
+  ssr: true,
   swr: false,
   prerender: true,
   static: false,
@@ -55,6 +55,7 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     strategy: 'prefix_and_default',
+    detectBrowserLanguage: false,
     defaultLocale: 'en',
     locales: [
       {
