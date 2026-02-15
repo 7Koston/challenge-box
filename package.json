@@ -1,7 +1,7 @@
 {
   "name": "challenge-box",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Challenge Box Game",
   "author": "7Koston",
   "license": "GPL-3.0-only",
@@ -27,33 +27,33 @@
     ]
   },
   "engines": {
-    "node": ">=24.13.0"
+    "node": ">=24.13.1"
   },
-  "packageManager": "pnpm@10.28.0",
+  "packageManager": "pnpm@10.29.3",
   "dependencies": {
-    "@nuxt/eslint": "1.12.1",
-    "@nuxt/icon": "2.2.0",
+    "@nuxt/eslint": "1.15.1",
+    "@nuxt/icon": "2.2.1",
     "@nuxt/image": "2.0.0",
     "@nuxtjs/color-mode": "4.0.0",
-    "@nuxtjs/i18n": "10.2.1",
-    "@vueuse/core": "^14.1.0",
-    "@vueuse/nuxt": "^14.1.0",
+    "@nuxtjs/i18n": "10.2.3",
+    "@vueuse/core": "^14.2.1",
+    "@vueuse/nuxt": "^14.2.1",
     "es-toolkit": "^1.44.0",
-    "nuxt": "^4.2.2",
-    "vue": "^3.5.26",
-    "vue-router": "^4.6.4"
+    "nuxt": "^4.3.1",
+    "vue": "^3.5.28",
+    "vue-router": "^5.0.2"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.12.1",
+    "@nuxt/eslint": "^1.15.1",
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/node": "^25.0.9",
+    "@types/node": "^25.2.3",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "prettier": "^3.8.0",
+    "prettier": "^3.8.1",
     "prettier-plugin-organize-imports": "^4.3.0",
     "typescript": "^5.9.3",
-    "vue-tsc": "^3.2.2"
+    "vue-tsc": "^3.2.4"
   }
 }
